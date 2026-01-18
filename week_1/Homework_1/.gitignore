@@ -1,0 +1,73 @@
+# -------------------------
+# PYTHON / UV
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# uv environment + caches
+.venv/              # default uv virtual environment
+.uv/                # uv package resolver cache
+uv.lock             # optional lock file if you don't want to commit
+.uv-cache/
+.uv_cache/
+
+# If you're committing uv.lock, remove the ignore above.
+
+# -------------------------
+# BUILD + PACKAGING
+# -------------------------
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# -------------------------
+# ENV / SECRETS
+# -------------------------
+.env
+*.env
+secrets*.json
+secrets/
+.credentials
+*.key
+*.pem
+
+# Keep .env.example only!
+
+# -------------------------
+# DATA
+# -------------------------
+data/
+!data/.gitkeep       # keep folder structure, ignore contents
+
+# -------------------------
+# DATABASE + DOCKER
+# -------------------------
+pgdata/
+db_data/
+*.db
+docker-compose.override.yml
+
+# -------------------------
+# LOGS
+# -------------------------
+logs/
+*.log
+
+# -------------------------
+# IDE / OS
+# -------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# -------------------------
+# TEST / COVERAGE
+# -------------------------
+pytest_cache/
+.coverage
+htmlcov/
