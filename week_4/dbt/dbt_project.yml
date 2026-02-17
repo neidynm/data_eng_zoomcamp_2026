@@ -1,0 +1,31 @@
+name: ny_taxi
+version: "1.0"
+config-version: 2
+
+profile: ny_taxi
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Project-level variables
+vars:
+  # Date range for dev environment sampling
+  dev_start_date: '2019-01-01'
+  dev_end_date: '2019-02-01'
+
+models:
+  taxi_rides_ny:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: table
+    marts:
+      +materialized: table
